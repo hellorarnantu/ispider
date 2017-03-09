@@ -9,3 +9,4 @@ dbutils.sh
 dbs/
 *\.pid
 
+将删除 .idea/
