@@ -43,27 +43,20 @@ class ISpiderPipeline(object):
         d.addBoth(lambda _: item)
 
     def _do_upinsert(self, conn, item, spider):
-        # title = item["title"]
-        # res = conn.execute("select count(*) from news where title='%s'" % title)
-        # print res
-        # res = 1
-        # if res == 0:
 
-        print item["content"]
-
-        dd = "insert into news(" \
+        insert_sql = "insert into news(" \
              "title, content, reading_number, agree_number, disagree_number, " \
              "category, keywords, author, original, created_time,source, image)" \
              " values ('%s', '%s', 0, 0, 0, 0, '%s', '%s', '%s', '%s', '%s', '%s')" % (item['title'],
                                                                                        str(item['content']),
-        # "http://baidu.com",
+
                                                                                        item['keywords'],
                                                                                        item['author'],
                                                                                        item["original"],
                                                                                        item['created_time'],
                                                                                        item["source"],
                                                                                        item['image'])
-        conn.execute(dd)
+        conn.execute(insert_sql)
 
     def close_spider(self, spider):
         logging.info(u"～～～Spider 结束～～～")
