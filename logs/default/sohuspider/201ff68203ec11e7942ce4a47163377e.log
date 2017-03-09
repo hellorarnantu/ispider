@@ -1,0 +1,90 @@
+2017-03-08 18:43:55 [scrapy.utils.log] INFO: Scrapy 1.3.2 started (bot: ispider)
+2017-03-08 18:43:55 [scrapy.utils.log] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'ispider.spiders', 'DEPTH_LIMIT': 2, 'CONCURRENT_REQUESTS_PER_DOMAIN': 10, 'SPIDER_MODULES': ['ispider.spiders'], 'BOT_NAME': 'ispider', 'DOWNLOAD_TIMEOUT': 5, 'LOG_LEVEL': 'INFO', 'LOG_FILE': 'logs/default/sohuspider/201ff68203ec11e7942ce4a47163377e.log', 'DOWNLOAD_DELAY': 0.25}
+2017-03-08 18:43:55 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-03-08 18:43:55 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'ispider.misc.middleware.CustomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-03-08 18:43:55 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-03-08 18:43:55 [scrapy.middleware] INFO: Enabled item pipelines:
+['ispider.pipelines.ISpiderPipeline']
+2017-03-08 18:43:55 [scrapy.core.engine] INFO: Spider opened
+2017-03-08 18:43:55 [root] INFO: ～～～Spider 开始～～～
+2017-03-08 18:43:55 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-03-08 18:43:56 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482732135.shtml
+2017-03-08 18:43:56 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482732135.shtml
+2017-03-08 18:43:56 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482712890.shtml
+2017-03-08 18:43:56 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482712890.shtml
+2017-03-08 18:43:57 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482715330.shtml
+2017-03-08 18:43:57 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482715330.shtml
+2017-03-08 18:43:57 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482712996.shtml
+2017-03-08 18:43:57 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482712996.shtml
+2017-03-08 18:43:57 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482713194.shtml
+2017-03-08 18:43:57 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482713194.shtml
+2017-03-08 18:43:57 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482717364.shtml
+2017-03-08 18:43:57 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482717364.shtml
+2017-03-08 18:43:58 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482715786.shtml
+2017-03-08 18:43:58 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482715786.shtml
+2017-03-08 18:43:58 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482718788.shtml
+2017-03-08 18:43:58 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482718788.shtml
+2017-03-08 18:43:58 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482721986.shtml
+2017-03-08 18:43:58 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482721986.shtml
+2017-03-08 18:43:58 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482725787.shtml
+2017-03-08 18:43:58 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482725787.shtml
+2017-03-08 18:43:59 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482722222.shtml
+2017-03-08 18:43:59 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482722222.shtml
+2017-03-08 18:43:59 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482722707.shtml
+2017-03-08 18:43:59 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482722707.shtml
+2017-03-08 18:43:59 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482723158.shtml
+2017-03-08 18:43:59 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482723158.shtml
+2017-03-08 18:44:00 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482723779.shtml
+2017-03-08 18:44:00 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482723779.shtml
+2017-03-08 18:44:00 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482732448.shtml
+2017-03-08 18:44:00 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482732448.shtml
+2017-03-08 18:44:00 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482732445.shtml
+2017-03-08 18:44:00 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482732445.shtml
+2017-03-08 18:44:01 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482723902.shtml
+2017-03-08 18:44:01 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482723902.shtml
+2017-03-08 18:44:01 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482724115.shtml
+2017-03-08 18:44:01 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482724115.shtml
+2017-03-08 18:44:01 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482726578.shtml
+2017-03-08 18:44:01 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482726578.shtml
+2017-03-08 18:44:02 [root] INFO: start crawl  --->  http://it.sohu.com/20170308/n482729734.shtml
+2017-03-08 18:44:02 [root] INFO: finished crawl  --->  http://it.sohu.com/20170308/n482729734.shtml
+2017-03-08 18:44:02 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-03-08 18:44:02 [root] INFO: ～～～Spider 结束～～～
+2017-03-08 18:44:02 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 7537,
+ 'downloader/request_count': 21,
+ 'downloader/request_method_count/GET': 21,
+ 'downloader/response_bytes': 549247,
+ 'downloader/response_count': 21,
+ 'downloader/response_status_count/200': 21,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 3, 8, 10, 44, 2, 132697),
+ 'item_scraped_count': 20,
+ 'log_count/INFO': 49,
+ 'request_depth_max': 1,
+ 'response_received_count': 21,
+ 'scheduler/dequeued': 21,
+ 'scheduler/dequeued/memory': 21,
+ 'scheduler/enqueued': 21,
+ 'scheduler/enqueued/memory': 21,
+ 'start_time': datetime.datetime(2017, 3, 8, 10, 43, 55, 867056)}
+2017-03-08 18:44:02 [scrapy.core.engine] INFO: Spider closed (finished)
