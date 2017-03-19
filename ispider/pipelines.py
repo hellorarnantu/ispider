@@ -10,6 +10,7 @@ from twisted.enterprise import adbapi
 import logging
 import MySQLdb
 import MySQLdb.cursors
+import hashlib
 
 
 class ISpiderPipeline(object):
@@ -43,20 +44,30 @@ class ISpiderPipeline(object):
         d.addBoth(lambda _: item)
 
     def _do_upinsert(self, conn, item, spider):
+        content = item['content']
+        m2 = hashlib.md5()
+        m2.update(content)
+        md5 = m2.hexdigest()
+        select_sql = 'SELECT 1 FROM news WHERE md5="%s"' % md5
+        # print select_sql
+        conn.execute(select_sql)
+        ret = conn.fetchone()
+        if not ret:
+            insert_sql = "insert into news(" \
+                         "title, content, reading_number, agree_number, disagree_number, " \
+                         "category, keywords, author, original, created_time,source, image, md5)" \
+                         " values ('%s', '%s', 0, 0, 0, 0, '%s', '%s', '%s', '%s', '%s', '%s','%s')" % (item['title'],
+                                                                                                   item['content'],
 
-        insert_sql = "insert into news(" \
-             "title, content, reading_number, agree_number, disagree_number, " \
-             "category, keywords, author, original, created_time,source, image)" \
-             " values ('%s', '%s', 0, 0, 0, 0, '%s', '%s', '%s', '%s', '%s', '%s')" % (item['title'],
-                                                                                       str(item['content']),
+                                                                                                   item['keywords'],
+                                                                                                   item['author'],
+                                                                                                   item["original"],
+                                                                                                   item['created_time'],
+                                                                                                   item["source"],
+                                                                                                   item['image'],
+                                                                                                md5)
 
-                                                                                       item['keywords'],
-                                                                                       item['author'],
-                                                                                       item["original"],
-                                                                                       item['created_time'],
-                                                                                       item["source"],
-                                                                                       item['image'])
-        conn.execute(insert_sql)
+            conn.execute(insert_sql)
 
     def close_spider(self, spider):
         logging.info(u"～～～Spider 结束～～～")
