@@ -63,7 +63,7 @@ DEPTH_LIMIT = 2
 
 
 # MYSQL_HOST = '47.93.39.190'
-MYSQL_HOST = os.environ.get('CALABASH_DATABASE_HOST', 'localhost')
-MYSQL_DBNAME = os.environ.get('CALABASH_DATABASE_NAME', 'ineww')
-MYSQL_USER = os.environ.get('CALABASH_DATABASE_USER', 'root')
-MYSQL_PASSWD = os.environ.get('CALABASH_DATABASE_PASSWORD', 'root')
+MYSQL_HOST = os.environ.get('INEWW_DATABASE_HOST', 'localhost')
+MYSQL_DBNAME = os.environ.get('INEWW_DATABASE_NAME', 'ineww')
+MYSQL_USER = os.environ.get('INEWW_DATABASE_USER', 'root')
+MYSQL_PASSWD = os.environ.get('INEWW_DATABASE_PASSWORD', 'root')
